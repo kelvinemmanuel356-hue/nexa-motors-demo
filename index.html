@@ -1,979 +1,711 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Nexa Motors | Drive Something Exceptional</title>
-
-<meta name="description" content="Nexa Motors — premium vehicles, financing and trade-in services.">
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #080808;
-  color: #f5f5f5;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.wrap {
-  width: 100%;
-  max-width: 1180px;
-  margin: auto;
-  padding: 0 22px;
-}
-
-/* HEADER */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(8,8,8,0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid #262626;
-}
-
-nav {
-  height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-.logo span {
-  color: #c9a45b;
-}
-
-.links {
-  display: flex;
-  gap: 25px;
-  color: #cfcfcf;
-  font-size: 14px;
-}
-
-.links a:hover {
-  color: #c9a45b;
-}
-
-.btn {
-  display: inline-block;
-  background: #c9a45b;
-  color: #111;
-  padding: 13px 20px;
-  border-radius: 4px;
-  font-weight: 800;
-  font-size: 13px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-
-.outline {
-  background: transparent;
-  color: white;
-  border: 1px solid #777;
-  margin-left: 10px;
-}
-
-/* HERO */
-.hero {
-  min-height: 650px;
-  display: flex;
-  align-items: center;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5,5,5,0.96),
-      rgba(5,5,5,0.65),
-      rgba(5,5,5,0.88)
-    ),
-    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
-}
-
-.hero-content {
-  max-width: 700px;
-  padding: 90px 0;
-}
-
-.eyebrow {
-  color: #c9a45b;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 16px;
-}
-
-.hero h1 {
-  font-size: clamp(45px, 7vw, 80px);
-  line-height: 1;
-  margin-bottom: 24px;
-}
-
-.hero p {
-  color: #c7c7c7;
-  font-size: 17px;
-  max-width: 570px;
-  margin-bottom: 30px;
-}
-
-/* SECTIONS */
-section {
-  padding: 85px 0;
-}
-
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  margin-bottom: 30px;
-}
-
-.section-head h2 {
-  font-size: 38px;
-}
-
-.muted {
-  color: #999;
-}
-
-/* INVENTORY */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.card {
-  background: #141414;
-  border: 1px solid #292929;
-  border-radius: 9px;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #c9a45b;
-}
-
-.car-img {
-  height: 230px;
-  background-size: cover;
-  background-position: center;
-}
-
-.card-body {
-  padding: 22px;
-}
-
-.tag {
-  color: #c9a45b;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.card h3 {
-  margin: 8px 0;
-  font-size: 21px;
-}
-
-.price {
-  font-size: 19px;
-  font-weight: 900;
-}
-
-.spec {
-  color: #999;
-  font-size: 13px;
-  margin: 10px 0 20px;
-}
-
-.card .btn {
-  width: 100%;
-  text-align: center;
-}
-
-/* FEATURES */
-.band {
-  background: #111;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.feature {
-  padding: 25px;
-  border: 1px solid #292929;
-  background: #151515;
-  border-radius: 8px;
-}
-
-.icon {
-  color: #c9a45b;
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.feature h3 {
-  margin-bottom: 7px;
-}
-
-.feature p {
-  color: #999;
-  font-size: 14px;
-}
-
-/* ABOUT */
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 55px;
-  align-items: center;
-}
-
-.about-img {
-  min-height: 430px;
-  border-radius: 8px;
-
-  background:
-    url("https://images.unsplash.com/photo-1562141961-b8b1f7b8b4f4?auto=format&fit=crop&w=1200&q=80")
-    center/cover;
-}
-
-.about h2 {
-  font-size: 42px;
-  line-height: 1.1;
-  margin-bottom: 18px;
-}
-
-.about p {
-  color: #aaa;
-  margin-bottom: 25px;
-}
-
-/* CTA */
-.cta {
-  background: linear-gradient(100deg,#171717,#0d0d0d);
-  border: 1px solid #292929;
-  border-radius: 10px;
-  padding: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-}
-
-.cta h2 {
-  font-size: 35px;
-}
-
-.cta p {
-  color: #aaa;
-  margin-top: 7px;
-}
-
-/* CONTACT */
-.contact-box {
-  max-width: 700px;
-}
-
-form {
-  display: grid;
-  gap: 13px;
-}
-
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 15px;
-  background: #151515;
-  color: white;
-  border: 1px solid #333;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-textarea {
-  min-height: 130px;
-  resize: vertical;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: #c9a45b;
-}
-
-/* WHATSAPP FLOATING BUTTON */
-.whatsapp {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 9999;
-
-  background: #25D366;
-  color: white;
-
-  padding: 14px 20px;
-  border-radius: 50px;
-
-  font-weight: bold;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-}
-
-.whatsapp:hover {
-  transform: scale(1.05);
-}
-
-/* FOOTER */
-footer {
-  border-top: 1px solid #292929;
-  padding: 35px 0;
-  color: #888;
-  font-size: 13px;
-}
-
-footer .wrap {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* MOBILE */
-@media(max-width:800px) {
-
-  .links {
-    display: none;
-  }
-
-  .grid,
-  .features,
-  .about {
-    grid-template-columns: 1fr;
-  }
-
-  .about-img {
-    min-height: 300px;
-  }
-
-  .cta {
-    padding: 30px;
-    display: block;
-  }
-
-  .cta .btn {
-    margin-top: 20px;
-  }
-
-  .hero {
-    min-height: 580px;
-  }
-
-  .hero h1 {
-    font-size: 50px;
-  }
-
-  .section-head {
-    display: block;
-  }
-
-  .section-head .muted {
-    display: block;
-    margin-top: 10px;
-  }
-
-  footer .wrap {
-    display: block;
-  }
-
-  footer span {
-    display: block;
-    margin-bottom: 8px;
-  }
-
-  nav .btn {
-    padding: 10px 13px;
-    font-size: 11px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<!-- HEADER -->
-<header>
-<div class="wrap">
-<nav>
-
-<a class="logo" href="#">
-NEXA <span>MOTORS</span>
-</a>
-
-<div class="links">
-<a href="#inventory">Inventory</a>
-<a href="#finance">Financing</a>
-<a href="#trade">Trade-In</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</div>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20a%20vehicle."
->
-Enquire Now
-</a>
-
-</nav>
-</div>
-</header>
-
-
-<main>
-
-<!-- HERO -->
-<section class="hero">
-
-<div class="wrap">
-
-<div class="hero-content">
-
-<div class="eyebrow">
-PREMIUM AUTOMOTIVE EXPERIENCE
-</div>
-
-<h1>
-Drive Something Exceptional.
-</h1>
-
-<p>
-Discover carefully selected vehicles, flexible financing and a buying experience built around you.
-</p>
-
-<a class="btn" href="#inventory">
-Explore Inventory
-</a>
-
-<a
-class="btn outline"
-target="_blank"
-href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20financing%20a%20vehicle."
->
-Get Financing
-</a>
-
-</div>
-</div>
-
-</section>
-
-
-<!-- INVENTORY -->
-<section id="inventory">
-
-<div class="wrap">
-
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-FEATURED INVENTORY
-</div>
-
-<h2>
-Find Your Next Drive.
-</h2>
-
-</div>
-
-<span class="muted">
-Premium Vehicles
-</span>
-
-</div>
-
-
-<div class="grid">
-
-
-<!-- MERCEDES -->
-<article class="card">
-
-<div
-class="car-img"
-style="background-image:url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1000&q=80')">
-</div>
-
-<div class="card-body">
-
-<span class="tag">
-2024 • Automatic
-</span>
-
-<h3>
-Mercedes-Benz C-Class
-</h3>
-
-<div class="price">
-₦68,500,000
-</div>
-
-<div class="spec">
-2.0L Turbo • 12,400 km • Petrol
-</div>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20the%20Mercedes-Benz%20C-Class."
->
-Enquire About This Car
-</a>
-
-</div>
-</article>
-
-
-<!-- BMW -->
-<article class="card">
-
-<div
-class="car-img"
-style="background-image:url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1000&q=80')">
-</div>
-
-<div class="card-body">
-
-<span class="tag">
-2023 • Automatic
-</span>
-
-<h3>
-BMW 5 Series
-</h3>
-
-<div class="price">
-₦61,900,000
-</div>
-
-<div class="spec">
-2.0L • 18,100 km • Petrol
-</div>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20the%20BMW%205%20Series."
->
-Enquire About This Car
-</a>
-
-</div>
-</article>
-
-
-<!-- RANGE ROVER -->
-<article class="card">
-
-<div
-class="car-img"
-style="background-image:url('https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1000&q=80')">
-</div>
-
-<div class="card-body">
-
-<span class="tag">
-2024 • Automatic
-</span>
-
-<h3>
-Range Rover Sport
-</h3>
-
-<div class="price">
-₦125,000,000
-</div>
-
-<div class="spec">
-3.0L • 9,800 km • Petrol
-</div>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20the%20Range%20Rover%20Sport."
->
-Enquire About This Car
-</a>
-
-</div>
-</article>
-
-</div>
-</div>
-
-</section>
-
-
-<!-- FEATURES -->
-<section class="band">
-
-<div class="wrap">
-
-<div class="features">
-
-<div class="feature">
-
-<div class="icon">◆</div>
-
-<h3>
-Curated Vehicles
-</h3>
-
-<p>
-Explore premium vehicles selected with quality, condition and value in mind.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="icon">₦</div>
-
-<h3>
-Flexible Financing
-</h3>
-
-<p>
-Ask our team about available financing options for your next vehicle.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="icon">✓</div>
-
-<h3>
-Personal Service
-</h3>
-
-<p>
-From enquiry to handover, we keep the buying process clear and personal.
-</p>
-
-</div>
-
-</div>
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-<section id="about">
-
-<div class="wrap">
-
-<div class="about">
-
-<div class="about-img"></div>
-
-<div>
-
-<div class="eyebrow">
-WHY NEXA MOTORS
-</div>
-
-<h2>
-A Better Way To Buy Your Next Car.
-</h2>
-
-<p>
-At Nexa Motors, we combine premium vehicles with straightforward service.
-Whether you're upgrading, buying your first luxury vehicle or searching for something specific, we're here to make the process simple.
-</p>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27d%20like%20to%20speak%20with%20your%20team."
->
-Talk To Our Team
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FINANCING -->
-<section id="finance">
-
-<div class="wrap">
-
-<div class="cta">
-
-<div>
-
-<div class="eyebrow">
-FINANCING
-</div>
-
-<h2>
-Make The Numbers Work For You.
-</h2>
-
-<p>
-Tell us what you're looking for and we'll help you explore your options.
-</p>
-
-</div>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20vehicle%20financing.%20Please%20send%20me%20more%20information."
->
-Request Finance Info
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- TRADE IN -->
-<section id="trade">
-
-<div class="wrap">
-
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-TRADE-IN
-</div>
-
-<h2>
-Ready For An Upgrade?
-</h2>
-
-</div>
-
-</div>
-
-<p
-class="muted"
-style="max-width:700px;margin-bottom:25px"
->
-Have a vehicle you'd like to trade? Send us your vehicle details and our team can guide you through the next steps.
-</p>
-
-<a
-class="btn"
-target="_blank"
-href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27d%20like%20to%20request%20a%20trade-in%20valuation.%20Here%20are%20my%20vehicle%20details:"
->
-Start Trade-In
-</a>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact">
-
-<div class="wrap">
-
-<div class="section-head">
-
-<div>
-
-<div class="eyebrow">
-CONTACT
-</div>
-
-<h2>
-Let's Find Your Car.
-</h2>
-
-</div>
-
-</div>
-
-
-<div class="contact-box">
-
-<form onsubmit="sendWhatsApp(event)">
-
-<input
-id="name"
-type="text"
-placeholder="Full name"
-required
->
-
-<input
-id="phone"
-type="tel"
-placeholder="Phone / WhatsApp number"
-required
->
-
-<select id="interest">
-
-<option value="Buying a vehicle">
-I'm interested in buying a vehicle
-</option>
-
-<option value="Financing">
-Vehicle financing
-</option>
-
-<option value="Trade-in">
-Trade-in
-</option>
-
-<option value="Specific vehicle">
-A specific vehicle
-</option>
-
-</select>
-
-<textarea
-id="message"
-placeholder="Tell us what you're looking for"
-></textarea>
-
-<button
-class="btn"
-type="submit"
-style="border:0;cursor:pointer"
->
-Send Enquiry on WhatsApp
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-</main>
-
-
-<!-- FLOATING WHATSAPP -->
-<a
-class="whatsapp"
-target="_blank"
-href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20a%20vehicle."
->
-WhatsApp Us
-</a>
-
-
-<!-- FOOTER -->
-<footer>
-
-<div class="wrap">
-
-<span>
-© 2026 Nexa Motors
-</span>
-
-<span>
-Drive Something Exceptional.
-</span>
-
-</div>
-
-</footer>
-
-
-<script>
-
-function sendWhatsApp(event) {
-
-event.preventDefault();
-
-const name =
-document.getElementById("name").value;
-
-const phone =
-document.getElementById("phone").value;
-
-const interest =
-document.getElementById("interest").value;
-
-const message =
-document.getElementById("message").value;
-
-
-const text =
-"Hello Nexa Motors,%0A%0A" +
-"My name is " + encodeURIComponent(name) + ".%0A" +
-"My WhatsApp/Phone: " + encodeURIComponent(phone) + "%0A" +
-"I'm interested in: " + encodeURIComponent(interest) + "%0A" +
-"Message: " + encodeURIComponent(message);
-
-
-window.open(
-"https://wa.me/2348053493429?text=" + text,
-"_blank"
-);
-
-}
-
-</script>
-
-</body>
-</html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nexa Homes | Find Your Perfect Home</title>
+
+  <meta name="description" content="Nexa Homes - Premium properties for sale and rent. Find your perfect home with us.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f5;
+      color: #161616;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 22px 6%;
+      color: white;
+    }
+
+    .nav {
+      max-width: 1250px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.65;
+    }
+
+    .nav-btn {
+      background: white;
+      color: #111 !important;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: none;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 760px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.35)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      width: 90%;
+      max-width: 1250px;
+      margin: 100px auto 0;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      padding: 8px 15px;
+      border: 1px solid rgba(255,255,255,.5);
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 7vw, 82px);
+      line-height: 1.02;
+      max-width: 800px;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 18px;
+      color: #eee;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 7px;
+      font-weight: bold;
+      transition: .3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-dark {
+      background: #111;
+      color: white;
+    }
+
+    .btn-white {
+      background: white;
+      color: #111;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .search-box {
+      width: 88%;
+      max-width: 1100px;
+      margin: -60px auto 80px;
+      position: relative;
+      z-index: 10;
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 15px 45px rgba(0,0,0,.12);
+    }
+
+    .search-box h3 {
+      margin-bottom: 17px;
+      font-size: 20px;
+    }
+
+    .search-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr auto;
+      gap: 12px;
+    }
+
+    .search-grid input,
+    .search-grid select {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 7px;
+      background: white;
+      outline: none;
+    }
+
+    .search-grid button {
+      padding: 15px 25px;
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    section {
+      padding: 90px 6%;
+    }
+
+    .container {
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    .section-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+
+    .section-description {
+      max-width: 500px;
+      color: #666;
+    }
+
+    /* =========================
+       PROPERTIES
+    ========================= */
+
+    .property-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .property-card {
+      background: white;
+      border-radius: 13px;
+      overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0,0,0,.06);
+      transition: .3s;
+    }
+
+    .property-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 35px rgba(0,0,0,.12);
+    }
+
+    .property-image {
+      height: 270px;
+      position: relative;
+    }
+
+    .property-image img {
+      height: 100%;
+    }
+
+    .badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: white;
+      color: #111;
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .property-content {
+      padding: 22px;
+    }
+
+    .property-content h3 {
+      font-size: 21px;
+      margin-bottom: 6px;
+    }
+
+    .location {
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 17px;
+    }
+
+    .property-info {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 20px;
+      border-top: 1px solid #eee;
+      padding-top: 15px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .property-btn {
+      display: block;
+      text-align: center;
+      background: #111;
+      color: white;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: #111;
+      color: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      height: 560px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .about-image img {
+      height: 100%;
+    }
+
+    .about .eyebrow {
+      color: #aaa;
+    }
+
+    .about h2 {
+      font-size: clamp(35px, 5vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 25px;
+    }
+
+    .about p {
+      color: #ccc;
+      margin-bottom: 25px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .stat {
+      border-top: 1px solid #444;
+      padding-top: 15px;
+    }
+
+    .stat strong {
+      font-size: 30px;
+      display: block;
+    }
+
+    .stat span {
+      color: #999;
+      font-size: 13px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      padding: 35px;
+      background: white;
+      border: 1px solid #e9e9e9;
+      border-radius: 12px;
+    }
+
+    .service-number {
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 35px;
+    }
+
+    .service h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .service p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* =========================
+       WHY US
+    ========================= */
+
+    .why {
+      background: #ecece8;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .why-card {
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+    }
+
+    .why-icon {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .why-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* =========================
+       TESTIMONIALS
+    ========================= */
+
+    .testimonials {
+      background: white;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .testimonial {
+      padding: 30px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+    }
+
+    .stars {
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+    }
+
+    .testimonial p {
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .person {
+      font-weight: bold;
+    }
+
+    .person small {
+      display: block;
+      color: #888;
+      font-weight: normal;
+      margin-top: 3px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 110px 6%;
+      background:
+        linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: #ddd;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 50px;
+    }
+
+    .contact-details h2 {
+      font-size: 45px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .contact-details p {
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .contact-item {
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .contact-item span {
+      color: #666;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 30px rgba(0,0,0,.07);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      border: 1px solid #ddd;
+      padding: 14px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      outline: none;
+    }
+
+    .contact-form textarea {
+      height: 140px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      width: 100%;
+      background: #111;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #111;
+      color: white;
+      padding: 60px 6% 25px;
+    }
+
+    .footer-grid {
+      max-width: 1250px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 45px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: #999;
+      font-size: 14px;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .copyright {
+      max-width: 1250px;
+      margin: auto;
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    /* =========================
+       WHATSAPP FLOAT
+    ========================= */
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      z-index: 9999;
+      box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media(max-width: 900px) {
+
+      .nav-links {
+        position: absolute;
+        top: 75px;
+        right: 6%;
+        width: 240px;
+        background: #111;
+        padding: 25px;
+        border-radius: 10px;
+        display: none;
+        flex-direction: column;
+        align-items: flex
