@@ -3,67 +3,977 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexa Motors — Drive Something Exceptional</title>
-<meta name="description" content="Nexa Motors — premium vehicles, transparent financing and trusted service.">
+
+<title>Nexa Motors | Drive Something Exceptional</title>
+
+<meta name="description" content="Nexa Motors — premium vehicles, financing and trade-in services.">
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:Inter,Arial,sans-serif;background:#0b0b0c;color:#f4f4f2;line-height:1.5}
-a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 22px}
-header{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.94);backdrop-filter:blur(12px);border-bottom:1px solid #29292b}
-nav{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:22px;font-weight:800;letter-spacing:2px}.logo span{color:#c9a45b}
-.links{display:flex;gap:25px;font-size:14px;color:#c9c9c7}.links a:hover{color:#fff}.btn{display:inline-block;padding:12px 18px;border-radius:4px;background:#c9a45b;color:#101010;font-weight:800;font-size:13px}
-.hero{min-height:600px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(8,8,9,.98),rgba(8,8,9,.55),rgba(8,8,9,.85)),url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85") center/cover}
-.hero-content{max-width:690px;padding:90px 0}.eyebrow{color:#c9a45b;font-size:12px;letter-spacing:3px;font-weight:800;margin-bottom:16px}.hero h1{font-size:clamp(45px,7vw,78px);line-height:.98;margin-bottom:22px}.hero p{color:#c7c7c5;max-width:540px;font-size:17px;margin-bottom:30px}.outline{border:1px solid #777;background:transparent;color:#fff;margin-left:10px}
-section{padding:82px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px}.section-head h2{font-size:34px}.muted{color:#9d9d9b}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#151516;border:1px solid #29292b;border-radius:8px;overflow:hidden}.car-img{height:220px;background-size:cover;background-position:center}.card-body{padding:20px}.tag{font-size:11px;color:#c9a45b;letter-spacing:1.5px;text-transform:uppercase}.card h3{margin:7px 0 8px;font-size:21px}.price{font-size:18px;font-weight:800}.spec{color:#9d9d9b;font-size:13px;margin:10px 0 18px}.card .btn{width:100%;text-align:center}
-.band{background:#121213;border-top:1px solid #29292b;border-bottom:1px solid #29292b}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.feature h3{margin:10px 0 5px}.feature p{color:#9d9d9b;font-size:14px}.icon{font-size:25px;color:#c9a45b}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-img{min-height:430px;border-radius:8px;background:url("https://images.unsplash.com/photo-1562141961-b8b1f7b8b4f4?auto=format&fit=crop&w=1200&q=80") center/cover}.about h2{font-size:42px;line-height:1.05;margin-bottom:18px}.about p{color:#aaa;margin-bottom:22px}
-.cta{background:linear-gradient(100deg,#171717,#0d0d0e);border:1px solid #29292b;border-radius:10px;padding:50px;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-size:34px}.cta p{color:#aaa;margin-top:7px}
-form{display:grid;gap:12px;max-width:650px}input,textarea,select{width:100%;padding:14px;background:#151516;border:1px solid #333;color:#fff;border-radius:4px}textarea{min-height:120px}
-footer{border-top:1px solid #29292b;padding:35px 0;color:#888;font-size:13px}footer .wrap{display:flex;justify-content:space-between}
-@media(max-width:800px){.links{display:none}.grid,.features,.about{grid-template-columns:1fr}.about-img{min-height:300px}.cta{padding:30px;display:block}.cta .btn{margin-top:20px}.hero{min-height:560px}}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #080808;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 22px;
+}
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(8,8,8,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #262626;
+}
+
+nav {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #c9a45b;
+}
+
+.links {
+  display: flex;
+  gap: 25px;
+  color: #cfcfcf;
+  font-size: 14px;
+}
+
+.links a:hover {
+  color: #c9a45b;
+}
+
+.btn {
+  display: inline-block;
+  background: #c9a45b;
+  color: #111;
+  padding: 13px 20px;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.outline {
+  background: transparent;
+  color: white;
+  border: 1px solid #777;
+  margin-left: 10px;
+}
+
+/* HERO */
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,5,5,0.96),
+      rgba(5,5,5,0.65),
+      rgba(5,5,5,0.88)
+    ),
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 90px 0;
+}
+
+.eyebrow {
+  color: #c9a45b;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 7vw, 80px);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  color: #c7c7c7;
+  font-size: 17px;
+  max-width: 570px;
+  margin-bottom: 30px;
+}
+
+/* SECTIONS */
+section {
+  padding: 85px 0;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 30px;
+}
+
+.section-head h2 {
+  font-size: 38px;
+}
+
+.muted {
+  color: #999;
+}
+
+/* INVENTORY */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background: #141414;
+  border: 1px solid #292929;
+  border-radius: 9px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #c9a45b;
+}
+
+.car-img {
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body {
+  padding: 22px;
+}
+
+.tag {
+  color: #c9a45b;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  margin: 8px 0;
+  font-size: 21px;
+}
+
+.price {
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.spec {
+  color: #999;
+  font-size: 13px;
+  margin: 10px 0 20px;
+}
+
+.card .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* FEATURES */
+.band {
+  background: #111;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.feature {
+  padding: 25px;
+  border: 1px solid #292929;
+  background: #151515;
+  border-radius: 8px;
+}
+
+.icon {
+  color: #c9a45b;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  margin-bottom: 7px;
+}
+
+.feature p {
+  color: #999;
+  font-size: 14px;
+}
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about-img {
+  min-height: 430px;
+  border-radius: 8px;
+
+  background:
+    url("https://images.unsplash.com/photo-1562141961-b8b1f7b8b4f4?auto=format&fit=crop&w=1200&q=80")
+    center/cover;
+}
+
+.about h2 {
+  font-size: 42px;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.about p {
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(100deg,#171717,#0d0d0d);
+  border: 1px solid #292929;
+  border-radius: 10px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.cta h2 {
+  font-size: 35px;
+}
+
+.cta p {
+  color: #aaa;
+  margin-top: 7px;
+}
+
+/* CONTACT */
+.contact-box {
+  max-width: 700px;
+}
+
+form {
+  display: grid;
+  gap: 13px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 15px;
+  background: #151515;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #c9a45b;
+}
+
+/* WHATSAPP FLOATING BUTTON */
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+
+  background: #25D366;
+  color: white;
+
+  padding: 14px 20px;
+  border-radius: 50px;
+
+  font-weight: bold;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.whatsapp:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid #292929;
+  padding: 35px 0;
+  color: #888;
+  font-size: 13px;
+}
+
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* MOBILE */
+@media(max-width:800px) {
+
+  .links {
+    display: none;
+  }
+
+  .grid,
+  .features,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img {
+    min-height: 300px;
+  }
+
+  .cta {
+    padding: 30px;
+    display: block;
+  }
+
+  .cta .btn {
+    margin-top: 20px;
+  }
+
+  .hero {
+    min-height: 580px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .section-head {
+    display: block;
+  }
+
+  .section-head .muted {
+    display: block;
+    margin-top: 10px;
+  }
+
+  footer .wrap {
+    display: block;
+  }
+
+  footer span {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  nav .btn {
+    padding: 10px 13px;
+    font-size: 11px;
+  }
+}
 </style>
 </head>
+
 <body>
-<header><div class="wrap"><nav>
-<a class="logo" href="#">NEXA <span>MOTORS</span></a>
-<div class="links"><a href="#inventory">Inventory</a><a href="#finance">Financing</a><a href="#trade">Trade-In</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-<a class="btn" href="#contact">Enquire Now</a>
-</nav></div></header>
+
+<!-- HEADER -->
+<header>
+<div class="wrap">
+<nav>
+
+<a class="logo" href="#">
+NEXA <span>MOTORS</span>
+</a>
+
+<div class="links">
+<a href="#inventory">Inventory</a>
+<a href="#finance">Financing</a>
+<a href="#trade">Trade-In</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+
+<a
+class="btn"
+target="_blank"
+href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20a%20vehicle."
+>
+Enquire Now
+</a>
+
+</nav>
+</div>
+</header>
+
 
 <main>
-<section class="hero"><div class="wrap"><div class="hero-content">
-<div class="eyebrow">PREMIUM AUTOMOTIVE EXPERIENCE</div><h1>Drive Something Exceptional.</h1>
-<p>Discover carefully selected vehicles, flexible financing and a buying experience built around you.</p>
-<a class="btn" href="#inventory">Explore Inventory</a><a class="btn outline" href="#finance">Get Financing</a>
-</div></div></section>
 
-<section id="inventory"><div class="wrap">
-<div class="section-head"><div><div class="eyebrow">FEATURED INVENTORY</div><h2>Find your next drive.</h2></div><span class="muted">Updated weekly</span></div>
-<div class="grid">
-<article class="card"><div class="car-img" style="background-image:url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1000&q=80')"></div><div class="card-body"><span class="tag">2024 • Automatic</span><h3>Mercedes-Benz C-Class</h3><div class="price">₦68,500,000</div><div class="spec">2.0L Turbo • 12,400 km • Petrol</div><a class="btn" href="#contact">View Vehicle</a></div></article>
-<article class="card"><div class="car-img" style="background-image:url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1000&q=80')"></div><div class="card-body"><span class="tag">2023 • Automatic</span><h3>BMW 5 Series</h3><div class="price">₦61,900,000</div><div class="spec">2.0L • 18,100 km • Petrol</div><a class="btn" href="#contact">View Vehicle</a></div></article>
-<article class="card"><div class="car-img" style="background-image:url('https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1000&q=80')"></div><div class="card-body"><span class="tag">2024 • Automatic</span><h3>Range Rover Sport</h3><div class="price">₦125,000,000</div><div class="spec">3.0L • 9,800 km • Petrol</div><a class="btn" href="#contact">View Vehicle</a></div></article>
-</div></div></section>
+<!-- HERO -->
+<section class="hero">
 
-<section class="band"><div class="wrap"><div class="features">
-<div class="feature"><div class="icon">◆</div><h3>Curated Vehicles</h3><p>Every vehicle is selected with quality, condition and value in mind.</p></div>
-<div class="feature"><div class="icon">₦</div><h3>Flexible Financing</h3><p>Explore payment options designed to make your next vehicle easier to own.</p></div>
-<div class="feature"><div class="icon">✓</div><h3>Trusted Service</h3><p>From enquiry to handover, our team keeps the process clear and personal.</p></div>
-</div></div></section>
+<div class="wrap">
 
-<section id="about"><div class="wrap"><div class="about"><div class="about-img"></div><div><div class="eyebrow">WHY NEXA MOTORS</div><h2>A better way to buy your next car.</h2><p>At Nexa Motors, we combine premium vehicles with straightforward service. Whether you're upgrading, buying your first luxury vehicle or searching for something specific, we're here to make the process simple.</p><a class="btn" href="#contact">Talk to Our Team</a></div></div></div></section>
+<div class="hero-content">
 
-<section id="finance"><div class="wrap"><div class="cta"><div><div class="eyebrow">FINANCING</div><h2>Make the numbers work for you.</h2><p>Tell us what you're looking for and we'll help you explore your options.</p></div><a class="btn" href="#contact">Request Finance Info</a></div></div></section>
+<div class="eyebrow">
+PREMIUM AUTOMOTIVE EXPERIENCE
+</div>
 
-<section id="trade"><div class="wrap"><div class="section-head"><div><div class="eyebrow">TRADE-IN</div><h2>Ready for an upgrade?</h2></div></div><p class="muted" style="max-width:700px;margin-bottom:22px">Send us your vehicle details and we'll get back to you with the next steps for a trade-in valuation.</p><a class="btn" href="#contact">Start Trade-In</a></div></section>
+<h1>
+Drive Something Exceptional.
+</h1>
 
-<section id="contact"><div class="wrap"><div class="section-head"><div><div class="eyebrow">CONTACT</div><h2>Let's find your car.</h2></div></div>
-<form onsubmit="event.preventDefault(); alert('Demo enquiry received. Replace this form with the client’s WhatsApp/email when the site is customized.');">
-<input placeholder="Full name" required><input type="tel" placeholder="Phone / WhatsApp" required><select><option>I'm interested in...</option><option>Buying a vehicle</option><option>Financing</option><option>Trade-in</option></select><textarea placeholder="Tell us what you're looking for"></textarea><button class="btn" style="border:0;cursor:pointer">Send Enquiry</<a href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20a%20vehicle." target="_blank">
-  Enquire on WhatsApp
+<p>
+Discover carefully selected vehicles, flexible financing and a buying experience built around you.
+</p>
+
+<a class="btn" href="#inventory">
+Explore Inventory
 </a>
-</form></div></section>
+
+<a
+class="btn outline"
+target="_blank"
+href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20financing%20a%20vehicle."
+>
+Get Financing
+</a>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- INVENTORY -->
+<section id="inventory">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+FEATURED INVENTORY
+</div>
+
+<h2>
+Find Your Next Drive.
+</h2>
+
+</div>
+
+<span class="muted">
+Premium Vehicles
+</span>
+
+</div>
+
+
+<div class="grid">
+
+
+<!-- MERCEDES -->
+<article class="card">
+
+<div
+class="car-img"
+style="background-image:url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1000&q=80')">
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+2024 • Automatic
+</span>
+
+<h3>
+Mercedes-Benz C-Class
+</h3>
+
+<div class="price">
+₦68,500,000
+</div>
+
+<div class="spec">
+2.0L Turbo • 12,400 km • Petrol
+</div>
+
+<a
+class="btn"
+target="_blank"
+href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20the%20Mercedes-Benz%20C-Class."
+>
+Enquire About This Car
+</a>
+
+</div>
+</article>
+
+
+<!-- BMW -->
+<article class="card">
+
+<div
+class="car-img"
+style="background-image:url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1000&q=80')">
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+2023 • Automatic
+</span>
+
+<h3>
+BMW 5 Series
+</h3>
+
+<div class="price">
+₦61,900,000
+</div>
+
+<div class="spec">
+2.0L • 18,100 km • Petrol
+</div>
+
+<a
+class="btn"
+target="_blank"
+href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20the%20BMW%205%20Series."
+>
+Enquire About This Car
+</a>
+
+</div>
+</article>
+
+
+<!-- RANGE ROVER -->
+<article class="card">
+
+<div
+class="car-img"
+style="background-image:url('https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1000&q=80')">
+</div>
+
+<div class="card-body">
+
+<span class="tag">
+2024 • Automatic
+</span>
+
+<h3>
+Range Rover Sport
+</h3>
+
+<div class="price">
+₦125,000,000
+</div>
+
+<div class="spec">
+3.0L • 9,800 km • Petrol
+</div>
+
+<a
+class="btn"
+target="_blank"
+href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20the%20Range%20Rover%20Sport."
+>
+Enquire About This Car
+</a>
+
+</div>
+</article>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+<section class="band">
+
+<div class="wrap">
+
+<div class="features">
+
+<div class="feature">
+
+<div class="icon">◆</div>
+
+<h3>
+Curated Vehicles
+</h3>
+
+<p>
+Explore premium vehicles selected with quality, condition and value in mind.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">₦</div>
+
+<h3>
+Flexible Financing
+</h3>
+
+<p>
+Ask our team about available financing options for your next vehicle.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">✓</div>
+
+<h3>
+Personal Service
+</h3>
+
+<p>
+From enquiry to handover, we keep the buying process clear and personal.
+</p>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="wrap">
+
+<div class="about">
+
+<div class="about-img"></div>
+
+<div>
+
+<div class="eyebrow">
+WHY NEXA MOTORS
+</div>
+
+<h2>
+A Better Way To Buy Your Next Car.
+</h2>
+
+<p>
+At Nexa Motors, we combine premium vehicles with straightforward service.
+Whether you're upgrading, buying your first luxury vehicle or searching for something specific, we're here to make the process simple.
+</p>
+
+<a
+class="btn"
+target="_blank"
+href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27d%20like%20to%20speak%20with%20your%20team."
+>
+Talk To Our Team
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FINANCING -->
+<section id="finance">
+
+<div class="wrap">
+
+<div class="cta">
+
+<div>
+
+<div class="eyebrow">
+FINANCING
+</div>
+
+<h2>
+Make The Numbers Work For You.
+</h2>
+
+<p>
+Tell us what you're looking for and we'll help you explore your options.
+</p>
+
+</div>
+
+<a
+class="btn"
+target="_blank"
+href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20vehicle%20financing.%20Please%20send%20me%20more%20information."
+>
+Request Finance Info
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TRADE IN -->
+<section id="trade">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+TRADE-IN
+</div>
+
+<h2>
+Ready For An Upgrade?
+</h2>
+
+</div>
+
+</div>
+
+<p
+class="muted"
+style="max-width:700px;margin-bottom:25px"
+>
+Have a vehicle you'd like to trade? Send us your vehicle details and our team can guide you through the next steps.
+</p>
+
+<a
+class="btn"
+target="_blank"
+href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27d%20like%20to%20request%20a%20trade-in%20valuation.%20Here%20are%20my%20vehicle%20details:"
+>
+Start Trade-In
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="wrap">
+
+<div class="section-head">
+
+<div>
+
+<div class="eyebrow">
+CONTACT
+</div>
+
+<h2>
+Let's Find Your Car.
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="contact-box">
+
+<form onsubmit="sendWhatsApp(event)">
+
+<input
+id="name"
+type="text"
+placeholder="Full name"
+required
+>
+
+<input
+id="phone"
+type="tel"
+placeholder="Phone / WhatsApp number"
+required
+>
+
+<select id="interest">
+
+<option value="Buying a vehicle">
+I'm interested in buying a vehicle
+</option>
+
+<option value="Financing">
+Vehicle financing
+</option>
+
+<option value="Trade-in">
+Trade-in
+</option>
+
+<option value="Specific vehicle">
+A specific vehicle
+</option>
+
+</select>
+
+<textarea
+id="message"
+placeholder="Tell us what you're looking for"
+></textarea>
+
+<button
+class="btn"
+type="submit"
+style="border:0;cursor:pointer"
+>
+Send Enquiry on WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
 </main>
 
-<footer><div class="wrap"><span>© 2026 Nexa Motors. Demo website.</span><span>Drive Something Exceptional.</span></div></footer>
+
+<!-- FLOATING WHATSAPP -->
+<a
+class="whatsapp"
+target="_blank"
+href="https://wa.me/2348053493429?text=Hello%20Nexa%20Motors%2C%20I%27m%20interested%20in%20a%20vehicle."
+>
+WhatsApp Us
+</a>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="wrap">
+
+<span>
+© 2026 Nexa Motors
+</span>
+
+<span>
+Drive Something Exceptional.
+</span>
+
+</div>
+
+</footer>
+
+
+<script>
+
+function sendWhatsApp(event) {
+
+event.preventDefault();
+
+const name =
+document.getElementById("name").value;
+
+const phone =
+document.getElementById("phone").value;
+
+const interest =
+document.getElementById("interest").value;
+
+const message =
+document.getElementById("message").value;
+
+
+const text =
+"Hello Nexa Motors,%0A%0A" +
+"My name is " + encodeURIComponent(name) + ".%0A" +
+"My WhatsApp/Phone: " + encodeURIComponent(phone) + "%0A" +
+"I'm interested in: " + encodeURIComponent(interest) + "%0A" +
+"Message: " + encodeURIComponent(message);
+
+
+window.open(
+"https://wa.me/2348053493429?text=" + text,
+"_blank"
+);
+
+}
+
+</script>
+
 </body>
 </html>
